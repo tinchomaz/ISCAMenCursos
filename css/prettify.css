@@ -1,0 +1,227 @@
+.jumbotron{
+	margin-bottom: 0px;
+}
+
+.jumbotron .logo {
+	width: 15%;
+	margin-top: -1.5%;
+	float: left;
+}
+
+.download {
+	text-align: center;
+}
+
+.download span {
+  margin: 0 4px;
+}
+
+footer {
+	padding: 20px;
+	margin-top: 30px;
+	background-color: #eee;
+	color: #FFF;
+	border-top: 1px #ccc solid;
+}
+
+.card {
+	width: 100%;
+	height: 200px;
+	font-size:25px;
+}
+
+.card-grid {
+  width: 30%;
+  height: auto;
+  min-height: 150px;
+  margin: 10px;
+  display: inline-block;
+  border-radius:5%;
+  color:#FFF;
+}
+
+.card-grid .front, .card-grid .back {
+  padding: 10px;
+  text-align: center;
+  border: 1px #333 solid;
+  border-radius:5%;
+  min-height: 150px;
+}
+
+.card-grid .front {
+  background-color: #045613;
+  color: white;
+  font-size: 20px;
+}
+
+.card-grid .back {
+  background-color: #03A921;
+  color: white;
+}
+
+.card .front{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	background-color: #045613;
+	
+}
+
+.card .back{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	background-color: #03A921;
+	
+}
+
+.download{
+	background-color: #252525;
+	padding: 20px;
+}
+
+.card img{
+	width: 100%;
+	height: 100%;
+}
+.card > .back{
+	word-wrap: break-word;
+}
+.margin-top{
+	margin-top: 10px;
+}
+
+.col-md-6 button.btn-primary {
+  float: left;
+  width: 35%;
+  margin: 2px 8px 0 0;
+}
+.table-wrapper{
+	overflow-x: scroll; 
+}
+
+.pln {
+  color: #48484C; }
+
+.str {
+  color: #DD1144; }
+
+.kwd {
+  color: #1E347B; }
+
+.com {
+  color: #93A1A1; }
+
+.typ {
+  color: teal; }
+
+.lit {
+  color: #195F91; }
+
+.pun {
+  color: #93A1A1; }
+
+.opn {
+  color: #93A1A1; }
+
+.clo {
+  color: #93A1A1; }
+
+.tag {
+  color: #008; }
+
+.atn {
+  color: teal; }
+
+.atv {
+  color: #DD1144; }
+
+.dec {
+  color: teal; }
+
+.var {
+  color: teal; }
+
+.fun {
+  color: #DC322F; }
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint {
+  background-color: #F7F7F9;
+  padding: 10px;
+  border: 1px solid #E1E1E8; }
+
+pre.prettyprint.linenums {
+  box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  color: #1E347B;
+  margin: 0 0 0 40px; }
+
+ol.linenums li {
+  color: #BEBEC5;
+  line-height: 18px;
+  padding-left: 12px;
+  text-shadow: 0 1px 0 #FFFFFF; }
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: normal; }
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  background: #eee; }
+
+
+@media screen and (max-width: 480px) {
+
+	
+.card {
+	width: 100%;
+	height: auto;
+	font-size:15px;
+}
+
+.card-grid {
+  width: 100%;
+  height: auto;
+  min-height: 175px;
+  margin: 5px;
+  display: inline-block;
+  border-radius:5%;
+  color:#FFF;
+}
+
+.card-grid .front, .card-grid .back {
+  padding: 2px;
+  text-align: center;
+  border: 1px #333 solid;
+  border-radius:5%;
+  min-height: 175px;
+}
+	
+.card-grid .front {
+  background-color: #045613;
+  color: white;
+  font-size: 15px;
+}
+
+.card-grid .back {
+  background-color: #03A921;
+  color: white;
+  font-size: 15px;
+}
+	
+
+}  

@@ -1,0 +1,26 @@
+hr { background-color: #618140; height: 1px; border: 0; }
+h5 { color: #618140;}
+h4 { color: #618140; margin-left: 5%;}
+table{border-width:1px; border-color: #618140; width: 90%; align:center; }
+tr{border-width:1px; border-color: #618140}
+a:link {color: #618140;text-decoration:none}
+   a:visited {color: #618140;}
+   a:hover {color: #FF8000;}
+   a:active {color: #FF8000;}
+img {border-radius: 0%;}
+p,table,tr,td,h5 { 	font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+		font-size: 18px;
+		line-height: 1.6;
+		margin-bottom: 24px;
+}
+li {font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 18px;}	
+
+.altoDiv{
+	height: 55px
+}
+
+@media screen and (max-width: 480px) {
+   .altoDiv{
+		height: 0px
+	}
+}
