@@ -1,0 +1,56 @@
+<?php
+if(Config::DISPLAY_ERROR){
+	ini_set('display_errors','On');
+	error_reporting(E_ALL);
+}else{
+	ini_set('display_errors','Off');
+}
+
+class ManagerSolicitudDanio {
+    
+    public function buscarRenspa($rutRenspa){ 
+	
+		$htmlResponse = '';
+		try {
+       		$dbconn = pg_connect("host=".Config::SERVIDOR_DB_179." port=".Config::PUERTO_DB." dbname=".Config::BASE_DB_OV." user=".Config::USUARIO_DB." password=".Config::CLAVE_DB."") or die('No se ha podido conectar: ' . pg_last_error());
+            $query = "SELECT * FROM nucleo.rut WHERE renspa = '".$rutRenspa."'";
+            $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());	
+            $count = 0;
+            $existe = false;
+			
+            while ($arr = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+            	$existe = true;	
+				$htmlResponse .= '<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+							<tr>
+							    <td>Propiedad:</td>
+								<td>'.$arr["propiedaddenominacion"].'</td>
+								<td>Renspa/Rut</td>
+								<td>'.$arr["renspa"].'</td>
+						   	</tr>
+							<tr>
+								<td>Titular</td>
+								<td>'.$arr["nombre"]. ' ' . $arr["apellido"] . '</td>
+								<td>CUIT</td>
+								<td>'.$arr["cuit"].'</td>
+							</tr>
+							<tr>
+								<td>Ubicaci&oacute;n</td>
+								<td>'.$arr["ubicacion"]. '</td>
+								<td>Localidad</td>
+								<td>'.$arr["distrito"]. ' ' . $arr["localidad"] . '</td>
+							</tr></table>';
+            }
+			
+			if(!$existe){
+				$htmlResponse = '<b>El rut ingresado no se encuentra registrado en ISCAMEN<b>';
+			}
+		
+	    }catch(phpmailerException $e) {
+            echo $e->errorMessage();
+        }	
+     	return $htmlResponse;
+	
+	}       
+	
+}
+?>
